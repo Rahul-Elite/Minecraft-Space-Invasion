@@ -1,0 +1,558 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 900;
+    user-select: none;
+}
+body{
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; 
+    position: relative;
+    background-blend-mode: darken;
+    overflow: hidden;
+}
+.start{
+    height: 20vh;
+    width: 30vw;
+    position: absolute;
+    text-align: center;
+    font-size:4vw;
+    top:25vw;
+    left:35vw;
+    font-weight: 900;
+    border-radius:5vw;
+    z-index: 2;
+    color:#00CED1;
+    visibility:visible;
+    animation:blink 1.6s infinite ;
+}
+.par{      
+    margin-top: 0px;
+    left: 0px;
+       
+    background-color:black;
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    overflow: hidden;
+   visibility: visible;
+}
+#back{
+    background-size: cover;
+    height:100vh;
+    width:100vw;
+    position: absolute;
+}
+#image1{
+    position: absolute;
+    height: 30vh;
+    width: 15vw;
+    top: 2vw;
+    background:linear-gradient(black,orange,black);
+    visibility: hidden;
+    left: 2vw;
+    border-radius:2vw;
+}
+#image2{
+    position: absolute;
+    height: 30vh;
+    width: 15vw;
+    bottom: 2vw;
+    visibility: hidden;
+    background:linear-gradient(black,white,black);
+    left: 81vw;
+    border-radius: 2vw;
+    
+}
+#image{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 50%;
+}
+a{
+    position: absolute;
+    top: 30vw;
+    
+    background-color: white;
+    color: red;
+}
+
+
+#boss{
+    position: absolute;
+    height: 40vh;
+    width: 30vw;
+    left: 35vw;
+    top: 1vw;
+    z-index: 2;
+    border-radius: 50%;
+    visibility:hidden;
+
+}
+.child{
+   
+    height:12vh;
+    width:7vw;
+    position:absolute;
+    bottom:2vh;
+    left:47vw;
+    z-index:2; 
+    visibility:hidden;
+   animation:sp-anim 3s linear infinite alternate-reverse; 
+}
+.child img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.fx{
+    background-color:green;
+    height:40px;
+    width:40px;
+    position:absolute;
+    border-radius:50%;            
+    bottom:8vh;            
+    left : 49.5vw;
+    visibility:hidden;
+}
+
+#f1{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    left: 48vw;
+    top: 24vh;
+    border-radius: 50%;
+    visibility: hidden;
+}
+#f2{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    left: 48vw;
+    top: 24vh;
+    border-radius: 50%;
+    visibility: hidden;
+
+}
+#f3{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    right: 49vw;
+    top: 24vh;
+    border-radius: 50%;
+    visibility: hidden;
+
+}
+#f4{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    left: 48vw;
+    top: 24vh;
+    border-radius: 50%;
+    visibility: hidden;
+
+}
+#f5{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    right: 49vw;
+    top: 24vh;
+    border-radius: 50%;
+    visibility: hidden;
+
+}
+#cm2{
+    position: absolute;
+    width: 20vw;
+    height: 20vh;
+    left: 20vw;
+    top: 2vw;
+    visibility: hidden;
+}
+#cm5{
+    position: absolute;
+    width: 20vw;
+    height: 20vh;
+    left: 20vw;
+    top: 2vw;
+    visibility: hidden;
+}
+#cm1{
+    position: absolute;
+    width: 20vw;
+    height: 20vh;
+    left: 60vw;
+    top: 30vw;
+    visibility: hidden;
+}
+#cm3{
+    position: absolute;
+    width: 22vw;
+    height: 22vh;
+    left: 58vw;
+    top: 30vw;
+    visibility: hidden;
+}
+#cm4{
+    position: absolute;
+    width: 20vw;
+    height: 20vh;
+    left: 60vw;
+    top: 30vw;
+    visibility: hidden;
+}
+#l1{
+    height: 6vh;
+    width: 3vw;
+    position: absolute;
+    left: 1vw;
+    top: 2vw;
+    visibility:hidden;
+}
+#l2{
+    height: 6vh;
+    width: 3vw;
+    position: absolute;
+    left: 4vw;
+    top: 2vw;
+    visibility:hidden;
+}
+#l3{
+    height: 6vh;
+    width: 3vw;
+    position: absolute;
+    left: 7vw;
+    top: 2vw;
+    visibility:hidden;
+}
+#l4{
+    height: 6vh;
+    width: 3vw;
+    position: absolute;
+    left: 10vw;
+    top: 2vw;
+    visibility:hidden;
+}
+#l5{
+    height: 6vh;
+    width: 3vw;
+    position: absolute;
+    left: 13vw;
+    top: 2vw;
+    visibility:hidden;
+
+}
+#bl1{
+    height: 1vh;
+    width: 4vw;
+    position: absolute;
+    left: 96vw;
+    top: 5vh;
+    z-index: 2;
+    visibility:hidden;
+}
+#bl2{
+    height: 1vh;
+    width: 3vw;
+    position: absolute;
+    left: 94vw;
+    top: 5vh;
+    z-index: 2;
+    
+    visibility:hidden;
+}
+#bl3{
+    height: 1vh;
+    width: 3vw;
+    position: absolute;
+    left: 92vw;
+    top: 5vh;
+    z-index: 2;
+    
+    visibility:hidden;
+}
+#bl4{
+    height: 1vh;
+    width: 3vw;
+    position: absolute;
+    left: 90vw;
+    top: 5vh;
+    z-index: 2;  
+    
+    visibility:hidden;
+}
+#bl5{
+    height: 1vh;
+    width: 3vw;
+    position: absolute;
+    left: 88vw;
+    top: 5vh;
+    z-index: 2;
+    
+    visibility:hidden;
+}
+#bosslife{
+    position: absolute;
+    height: 1.5vh;
+    width: 12vw;
+    left: 88vw;
+    top: 4.7vh;
+    background-color: black;
+    border: 1px solid white; 
+    visibility:hidden;
+}
+
+#shutter{
+  position: absolute;
+  border-top:8px solid grey;
+  height: 55vh;
+  width: 100vw;
+  bottom: 0px;
+  left: 0px;
+  background: black;
+  visibility:hidden;
+  z-index: 8;
+}
+
+
+@keyframes blink{
+    0%{
+       opacity:1 ;
+    }
+    50%{
+        opacity:0 ;
+    }
+    100%{
+       opacity:1 ;
+    }
+}
+
+
+@keyframes down{
+    0%{
+       bottom:0vh;
+    }
+    100%{
+       bottom:-55vh;
+    }
+}
+
+@keyframes bsmove{
+    0%{
+       left:35vw;
+       top:1vh;
+    }
+    25%{
+        left:30vw;
+    }
+    50%{
+        left:35vw; 
+        top:2vh; 
+    }
+    75%{
+        left:40vw;
+    }
+    100%{
+       left:35vw;
+       top:1vh;
+    }
+}
+
+@keyframes sp-anim{
+    0%{
+       bottom:5vh;
+    }
+    100%{
+       bottom:1vh;
+    }
+}
+
+@keyframes anim2{
+    0%{
+       bottom:10vh;
+    }
+    100%{
+       bottom:105vh;
+    }
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+
+
+@keyframes anim-11{
+    0%{
+       top:24vh;
+    }
+    100%{
+       top:1000px;
+    }
+}
+@keyframes anim-22{
+    0%{
+        top:24vh;
+       left:48vw;
+    }
+    100%{
+       top:1000px;
+       left:75vw;
+    }
+}
+@keyframes anim-33{
+    0%{
+       top:24vh;
+       right:49vw;
+    }
+    100%{
+       top:1000px;
+       right:105vw;
+    }
+}
+@keyframes anim-44{
+    0%{
+       top:24vh;
+       left:48vw;
+    }
+    100%{
+       top:1000px;
+       left:105vw;
+    }   
+}
+@keyframes anim-55{
+    0%{
+       top:24vh;
+       right:49vw;
+    }
+    100%{
+       top:1000px;
+       right:75vw;
+    }   
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+
+@keyframes anim-1{
+    0%{
+       top:24vh;
+    }
+    100%{
+       top:1000px;
+    }
+}
+@keyframes anim-2{
+    0%{
+       top:24vh;
+       left:48vw;
+    }
+    100%{
+       top:1000px;
+       left:65vw;
+    }
+}
+@keyframes anim-3{
+    0%{
+        top:24vh;
+       right:49vw;
+    }
+    100%{
+       top:1000px;
+       right:90vw;
+    }
+}
+@keyframes anim-4{
+    0%{
+        top:24vh;
+       left:48vw;
+    }
+    100%{
+       top:1000px;
+       left:90vw;
+    }   
+}
+@keyframes anim-5{
+    0%{
+        top:24vh;
+       right:49vw;
+    }
+    100%{
+       top:1000px;
+       right:65vw;
+    }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

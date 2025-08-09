@@ -1,0 +1,353 @@
+ *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 900;
+    user-select: none;
+}
+body{
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    background-blend-mode: darken;
+    overflow: hidden;
+}
+.start{
+    height: 20vh;
+    width: 30vw;
+    position: absolute;
+    text-align: center;
+    font-size:4vw;
+    top:25vw;
+    left:34vw;
+    font-weight: 900;
+    border-radius:5vw;
+    z-index: 2;
+    color:#00CED1;
+    visibility:visible;
+    animation:blink 1.6s infinite ;
+}
+.start1{
+    height: 20vh;
+    width: 30vw;
+    position: absolute;
+    text-align: center;
+    font-size:4vw;
+    top:27vw;
+    left: 33vw;
+    font-weight: 900;
+    border-radius:25px;
+    z-index: 2;
+    visibility: hidden;
+    color:#00CED1;
+}
+#name{
+    position: absolute;
+    top:8vw;
+    left:32vw;
+    font-size: 9vw;
+    font-weight: 900;
+    color:orange;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 3;
+     visibility: visible;
+}
+
+
+#instruction{
+    position: absolute;
+    top:9vh;
+    left: 38vw;
+    z-index: 10;
+    font-size: 4vw;
+    list-style-type: square;
+    color:red;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    visibility: hidden;
+}
+
+
+
+#steps{
+   
+   position: absolute;
+   top:23vh;
+   z-index: 10;
+   left:40vw;
+   visibility: hidden;
+   font-size: 2vw;
+   font-weight: 700;
+   color:yellow;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   list-style-type: disc;
+
+}
+
+
+#para{
+    position: absolute;
+    right:10vw;
+    z-index: 2;
+    top:2vh;
+    font-size: 60px;
+    font-weight: 700;
+    color: orange;
+    visibility: hidden;
+}
+
+
+
+.par{      
+    margin-top: 0px;
+    left: 0px;
+       
+    background-color:red;
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    overflow: hidden;
+    visibility: visible;
+   
+}
+
+#craft{
+    position: absolute;
+    height: 10vw;
+    width: 20vh;
+    z-index: 2;
+}
+
+#back{
+    background-size: cover;
+    height:100vh;
+    width:100vw;
+   
+    visibility: visible;
+    position: absolute;
+}
+#ufo{
+    height:20vh;
+    width: 10vw;
+    border-radius: 50%;
+}
+
+#alien{
+height:20vh;
+width:10vw;
+position:absolute;
+top:20px;
+z-index:1;
+visibility:hidden;
+}
+#alien2{
+    height:20vh;
+    width:10vw;
+    position:absolute;
+    top:20px;
+    z-index:1;
+    visibility:hidden;
+    }
+    #alien3{
+        height:20vh;
+        width:10vw;
+        position:absolute;
+        top:20px;
+        z-index:1;
+        visibility:hidden;
+        }
+
+
+.child{
+   
+    height:25vh;
+    width:15vw;
+    position:absolute;
+    bottom:2vh;
+    left:44vw;
+    z-index:2;  
+    animation:sp-anim 2s linear infinite alternate-reverse; 
+}
+.child img{
+    height: 100%;
+    width: 100%;
+}
+#win{
+  position: absolute;
+  height: 100vh;
+  width:100vw;
+  top:0px;
+  left:0px;
+}
+
+
+#craftover{
+    height: 180px;
+    width: 200px;
+    position: absolute;
+    bottom:5vh;
+    right:46vw;
+}
+
+.fighter{
+    background-color:green;
+    height:5vh;
+    width:2vw;
+    position:absolute;
+    border-radius:50%;            
+    bottom:16vh;            
+    left : 48vw;
+    visibility:visible;
+}
+#bullet{
+    height:5vh;
+    width:2vw;
+    border-radius:60%;
+    
+  }
+#shoot{
+    height: 4vh;
+    width: 3vw; 
+    border-radius: 5px;
+    position: absolute;
+    color: #00CED1;
+    right:6vw ;
+    top:2vh;
+    text-align: right;
+    font-size:60px;
+    font-weight:700;
+    visibility: hidden;
+    z-index: 2;
+}
+#show{
+    background-color: tan;
+    height: 12vh;
+    border-radius: 5px;
+    top:49vh;
+    width: 14vw;
+    left:41vw;
+    color: black;
+    text-align: center;
+    font-size:90px;
+    font-weight:700 ;
+    position: absolute;
+}
+
+#over{
+    
+    height:100vh;
+    width: 100vw; 
+    background-color: rgb(9, 9, 9);
+    position: absolute;
+    left:0px;
+    top:0px;
+    color:red;
+    text-align: center;
+    font-size:10vw;
+    font-weight:700 ;
+    visibility: hidden;
+}
+#over1{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    top: 0;
+}
+
+#level1{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    visibility: visible;
+    color:orangered;
+    text-align: center;
+    font-size:200px;
+    font-weight:900;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.buttn{
+    color:red;
+    background-color:rgb(184, 227, 246);
+    border-radius: 4vw;
+    border-radius: 2px solid red;
+    height: 3vw;
+    width: 25vw;
+    position: absolute;
+    top: 35vw;
+    left: 39vw;
+    font-size: 2vw;
+    font-weight: 900;
+}
+#again{
+    border-radius: 4vw;
+    border-radius: 2px solid red;
+    height: 3vw;
+    width: 20vw;
+    font-weight: 900;
+    position: absolute;
+    top: 33vw;
+    left: 44vw;
+    color:yellowgreen;
+    font-size: 2vw;
+    font-weight: 900;
+    visibility: hidden;
+    animation:blink 1.6s infinite ;
+}
+#lvlup:hover{
+    color:red;
+}
+.level1 a{
+    text-decoration: none;
+    color:red;
+    font-size: 2vw;
+    font-weight: 900;
+}
+#win{    
+    height:100vh;
+    width: 100vw; 
+    position: absolute;
+    left:0px;
+    top:0px;
+    color:red;
+    text-align: center;
+    font-size:135px;
+    font-weight:700 ;
+    visibility: hidden;
+}
+
+@keyframes blink{
+    0%{
+       opacity:1 ;
+    }
+    50%{
+        opacity:0 ;
+    }
+    100%{
+       opacity:1 ;
+    }
+}
+
+
+@keyframes anim{
+     0%{
+        bottom:15vh;
+     }
+     100%{
+        bottom:105vh;
+     }
+}
+
+@keyframes sp-anim{
+    0%{
+       bottom:20px;
+    }
+    100%{
+       bottom:0px;
+    }
+}
+
+
+
+
