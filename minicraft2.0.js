@@ -216,7 +216,7 @@ function fire(e){
 
 
          if(shoot%7 == 0 && shoot>0){
-            speed=speed+0.6;
+            speed=speed+0.1;
         }
 
         col=setInterval(collision,1);
