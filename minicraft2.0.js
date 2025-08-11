@@ -215,8 +215,8 @@ function fire(e){
         r3.style.animation='anim 1s linear 1 forwards';
 
 
-         if(shoot%20 == 0 && shoot>0){
-            speed=speed+0.1;
+         if(shoot%10 == 0 && shoot>0){
+            speed=speed+0.4;
         }
 
         col=setInterval(collision,1);
