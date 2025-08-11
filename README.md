@@ -15,11 +15,14 @@
 
 @Creater Deails
  
-Ram Singh Chauhan 
-         Role : Assign Task and Project Coordinator (Team leader)
-Saurabh Singh Yadav 
-         Role : Css,html and Narrative & Gameplay Planner
-Rahul Kushwaha
-         Role : Javascript , Concept Designer and Lead Ideator
-Santosh Kumar 
-         Role:  all images audio sourcing and Creative Director
+**Ram Singh Chauhan**  
+Role: Assign Task and Project Coordinator (Team Leader)  
+
+**Saurbh Singh Yadav**  
+Role: CSS, HTML, Narrative & Gameplay Planner  
+
+**Rahul Kushwaha**  
+Role: JavaScript, Concept Designer, Lead Ideator  
+
+**Santosh Kumar**  
+Role: Images & Audio Sourcing, Creative Director
