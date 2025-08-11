@@ -215,7 +215,7 @@ function fire(e){
         r3.style.animation='anim 1s linear 1 forwards';
 
 
-         if(shoot%7 == 0 && shoot>0){
+         if(shoot%20 == 0 && shoot>0){
             speed=speed+0.1;
         }
 
