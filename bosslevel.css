@@ -5,6 +5,9 @@
     font-weight: 900;
     user-select: none;
 }
+:root {
+    --bullet-start-boss: 10vh;
+}
 body{
     background-size: cover;
     background-attachment: fixed;
@@ -377,7 +380,7 @@ a{
 
 @keyframes anim2{
     0%{
-       bottom:10vh;
+       bottom:var(--bullet-start-boss);
     }
     100%{
        bottom:105vh;
@@ -499,20 +502,20 @@ a{
 #mobile-controls {
     display: none;
     position: absolute;
-    bottom: 5vh;
+    bottom: 4vh;
     left: 0;
     width: 100vw;
-    height: 15vh;
+    height: 12vh;
     z-index: 10000;
     pointer-events: none;
     justify-content: space-between;
     align-items: center;
-    padding: 0 6vw;
+    padding: 0 8vw;
 }
 
 .direction-controls {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     pointer-events: none;
 }
 
@@ -521,42 +524,64 @@ a{
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1.5px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.control-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.1s ease;
 }
 
 .control-btn:active {
-    background: rgba(0, 206, 209, 0.3);
+    background: radial-gradient(circle at center, rgba(0, 206, 209, 0.3) 0%, rgba(0, 206, 209, 0.1) 100%);
     border-color: rgba(0, 206, 209, 0.6);
-    box-shadow: 0 0 15px rgba(0, 206, 209, 0.5);
-    transform: scale(0.9);
+    box-shadow: 0 0 20px rgba(0, 206, 209, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+    transform: scale(0.88);
+    color: #00CED1;
 }
 
 #btn-fire {
-    background: rgba(255, 69, 0, 0.15);
-    border-color: rgba(255, 69, 0, 0.3);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at center, rgba(255, 69, 0, 0.25) 0%, rgba(255, 69, 0, 0.08) 100%);
+    border-color: rgba(255, 69, 0, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(255, 69, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+#btn-fire svg {
+    width: 38px;
+    height: 38px;
 }
 
 #btn-fire:active {
-    background: rgba(255, 69, 0, 0.35);
-    border-color: rgba(255, 69, 0, 0.7);
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+    background: radial-gradient(circle at center, rgba(255, 69, 0, 0.45) 0%, rgba(255, 69, 0, 0.15) 100%);
+    border-color: rgba(255, 69, 0, 0.8);
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+    transform: scale(0.88);
+    color: #ff4500;
 }
 
 @media (max-width: 1024px) {
+    :root {
+        --bullet-start-boss: 22vh;
+    }
+
     #mobile-controls {
         display: flex;
     }
@@ -589,7 +614,6 @@ a{
     .fx {
         width: 25px !important;
         height: 25px !important;
-        bottom: 22vh !important;
     }
 
     #cm1, #cm2, #cm3, #cm4, #cm5 {

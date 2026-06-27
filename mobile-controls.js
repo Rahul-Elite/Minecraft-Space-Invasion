@@ -6,14 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let leftInterval = null;
     let rightInterval = null;
 
-    // Helper to dispatch keydown event to window
+    // Helper to dispatch keydown event to window with populated keyCode & which properties
     function dispatchKey(code) {
-        const event = new KeyboardEvent("keydown", {
-            keyCode: code,
+        const eventObj = new KeyboardEvent("keydown", {
             bubbles: true,
             cancelable: true
         });
-        window.dispatchEvent(event);
+        Object.defineProperty(eventObj, 'keyCode', {
+            get: () => code,
+            configurable: true
+        });
+        Object.defineProperty(eventObj, 'which', {
+            get: () => code,
+            configurable: true
+        });
+        window.dispatchEvent(eventObj);
     }
 
     // Touch controls for Left button
