@@ -189,7 +189,7 @@ function fire(e){
     
         r3 = document.getElementById(ran);
         r3.className="fighter";
-        r3.children[0].src="bullet.png";
+        r3.children[0].src="images/bullet.png";
         r3.children[0].id="bullet"; 
         
          

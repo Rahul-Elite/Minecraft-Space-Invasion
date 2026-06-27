@@ -495,6 +495,184 @@ a{
     }   
 }
 
+/* --- Mobile Controls & Responsiveness --- */
+#mobile-controls {
+    display: none;
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    z-index: 10000;
+    pointer-events: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6vw;
+}
+
+.direction-controls {
+    display: flex;
+    gap: 15px;
+    pointer-events: none;
+}
+
+.control-btn {
+    pointer-events: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.control-btn:active {
+    background: rgba(0, 206, 209, 0.3);
+    border-color: rgba(0, 206, 209, 0.6);
+    box-shadow: 0 0 15px rgba(0, 206, 209, 0.5);
+    transform: scale(0.9);
+}
+
+#btn-fire {
+    background: rgba(255, 69, 0, 0.15);
+    border-color: rgba(255, 69, 0, 0.3);
+}
+
+#btn-fire:active {
+    background: rgba(255, 69, 0, 0.35);
+    border-color: rgba(255, 69, 0, 0.7);
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+}
+
+@media (max-width: 1024px) {
+    #mobile-controls {
+        display: flex;
+    }
+
+    .child {
+        width: 15vw !important;
+        height: 15vw !important;
+        min-width: 55px !important;
+        min-height: 55px !important;
+        bottom: 12vh !important;
+    }
+
+    .child img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    #boss {
+        width: 32vw !important;
+        height: 32vw !important;
+        left: 34vw !important;
+    }
+
+    #f1, #f2, #f3, #f4, #f5 {
+        width: 6vw !important;
+        height: 6vw !important;
+    }
+
+    .fx {
+        width: 25px !important;
+        height: 25px !important;
+        bottom: 22vh !important;
+    }
+
+    #cm1, #cm2, #cm3, #cm4, #cm5 {
+        width: 50vw !important;
+        height: auto !important;
+    }
+    
+    #cm1, #cm3, #cm4 {
+        left: 45vw !important;
+        top: 25vh !important;
+    }
+    
+    #cm2, #cm5 {
+        left: 5vw !important;
+        top: 8vh !important;
+    }
+
+    #image1 {
+        width: 30vw !important;
+        height: 30vw !important;
+        left: 2vw !important;
+        top: 2vh !important;
+    }
+    
+    #image2 {
+        width: 30vw !important;
+        height: 30vw !important;
+        left: 68vw !important;
+        bottom: 15vh !important;
+    }
+
+    #l1, #l2, #l3, #l4, #l5 {
+        height: 5vw !important;
+        width: 5vw !important;
+        min-width: 20px !important;
+        min-height: 20px !important;
+        top: 2vh !important;
+    }
+    #l1 { left: 2vw !important; }
+    #l2 { left: 8vw !important; }
+    #l3 { left: 14vw !important; }
+    #l4 { left: 20vw !important; }
+    #l5 { left: 26vw !important; }
+
+    #bosslife {
+        width: 32vw !important;
+        left: 65vw !important;
+        top: 2.2vh !important;
+        height: 12px !important;
+    }
+
+    #bl1, #bl2, #bl3, #bl4, #bl5 {
+        height: 8px !important;
+        width: 6vw !important;
+        top: 2.4vh !important;
+    }
+    #bl1 { left: 91vw !important; }
+    #bl2 { left: 85vw !important; }
+    #bl3 { left: 79vw !important; }
+    #bl4 { left: 73vw !important; }
+    #bl5 { left: 67vw !important; }
+
+    .start {
+        font-size: 7vw !important;
+        top: 45vh !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 45vw !important;
+        height: auto !important;
+        border: 3px solid #00CED1 !important;
+        padding: 10px !important;
+        border-radius: 20px !important;
+    }
+
+    #Skip {
+        font-size: 5vw !important;
+        top: 7vh !important;
+        right: 4vw !important;
+        width: auto !important;
+        height: auto !important;
+    }
+}
+
 
 
 
