@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="bosslevel.css">
     <link rel="stylesheet" href="start-over.css">
 </head>
@@ -95,24 +97,22 @@
    
 
     <div id="mobile-controls">
-        <div class="direction-controls">
-            <button class="control-btn" id="btn-left" aria-label="Move Left">
-                <svg viewBox="0 0 24 24">
-                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                </svg>
-            </button>
-            <button class="control-btn" id="btn-right" aria-label="Move Right">
-                <svg viewBox="0 0 24 24">
-                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-            </button>
-        </div>
+        <button class="control-btn" id="btn-left" aria-label="Move Left">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
         <button class="control-btn" id="btn-fire" aria-label="Fire Weapon">
             <svg viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
                 <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
                 <circle cx="12" cy="12" r="2" fill="currentColor"/>
                 <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <button class="control-btn" id="btn-right" aria-label="Move Right">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
             </svg>
         </button>
     </div>

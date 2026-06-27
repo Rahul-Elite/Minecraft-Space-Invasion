@@ -1,142 +1,165 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const btnLeft = document.getElementById("btn-left");
-    const btnRight = document.getElementById("btn-right");
-    const btnFire = document.getElementById("btn-fire");
+const btnLeft = document.getElementById("btn-left");
+const btnRight = document.getElementById("btn-right");
+const btnFire = document.getElementById("btn-fire");
 
-    let leftInterval = null;
-    let rightInterval = null;
+let leftInterval = null;
+let rightInterval = null;
 
-    // Helper to dispatch keydown event to window with populated keyCode & which properties
-    function dispatchKey(code) {
-        const eventObj = new KeyboardEvent("keydown", {
-            bubbles: true,
-            cancelable: true
-        });
-        Object.defineProperty(eventObj, 'keyCode', {
-            get: () => code,
-            configurable: true
-        });
-        Object.defineProperty(eventObj, 'which', {
-            get: () => code,
-            configurable: true
-        });
-        window.dispatchEvent(eventObj);
-    }
+// Helper to dispatch keydown event to window with populated keyCode & which properties
+function dispatchKey(code) {
+    const eventObj = new KeyboardEvent("keydown", {
+        bubbles: true,
+        cancelable: true
+    });
+    Object.defineProperty(eventObj, 'keyCode', {
+        get: () => code,
+        configurable: true
+    });
+    Object.defineProperty(eventObj, 'which', {
+        get: () => code,
+        configurable: true
+    });
+    window.dispatchEvent(eventObj);
+}
 
-    // Touch controls for Left button
-    if (btnLeft) {
-        btnLeft.addEventListener("touchstart", (e) => {
-            e.preventDefault();
-            dispatchKey(37); // Move Left
-            if (leftInterval) clearInterval(leftInterval);
-            leftInterval = setInterval(() => {
-                dispatchKey(37);
-            }, 50); // Move every 50ms (20vw/sec)
-        }, { passive: false });
-
-        btnLeft.addEventListener("touchend", (e) => {
-            e.preventDefault();
-            if (leftInterval) {
-                clearInterval(leftInterval);
-                leftInterval = null;
-            }
-        }, { passive: false });
-
-        btnLeft.addEventListener("touchcancel", (e) => {
-            e.preventDefault();
-            if (leftInterval) {
-                clearInterval(leftInterval);
-                leftInterval = null;
-            }
-        }, { passive: false });
-
-        // Mouse controls (for desktop testing / mobile emulation in devtools)
-        btnLeft.addEventListener("mousedown", (e) => {
-            e.preventDefault();
+// Touch controls for Left button
+if (btnLeft) {
+    btnLeft.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        dispatchKey(37); // Move Left
+        if (leftInterval) clearInterval(leftInterval);
+        leftInterval = setInterval(() => {
             dispatchKey(37);
-            if (leftInterval) clearInterval(leftInterval);
-            leftInterval = setInterval(() => {
-                dispatchKey(37);
-            }, 50);
-        });
+        }, 50); // Move every 50ms (20vw/sec)
+    }, { passive: false });
 
-        btnLeft.addEventListener("mouseup", () => {
-            if (leftInterval) {
-                clearInterval(leftInterval);
-                leftInterval = null;
-            }
-        });
+    btnLeft.addEventListener("touchend", (e) => {
+        e.preventDefault();
+        if (leftInterval) {
+            clearInterval(leftInterval);
+            leftInterval = null;
+        }
+    }, { passive: false });
 
-        btnLeft.addEventListener("mouseleave", () => {
-            if (leftInterval) {
-                clearInterval(leftInterval);
-                leftInterval = null;
-            }
-        });
-    }
+    btnLeft.addEventListener("touchcancel", (e) => {
+        e.preventDefault();
+        if (leftInterval) {
+            clearInterval(leftInterval);
+            leftInterval = null;
+        }
+    }, { passive: false });
 
-    // Touch controls for Right button
-    if (btnRight) {
-        btnRight.addEventListener("touchstart", (e) => {
-            e.preventDefault();
-            dispatchKey(39); // Move Right
-            if (rightInterval) clearInterval(rightInterval);
-            rightInterval = setInterval(() => {
-                dispatchKey(39);
-            }, 50);
-        }, { passive: false });
+    // Mouse controls (for desktop testing / mobile emulation in devtools)
+    btnLeft.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        dispatchKey(37);
+        if (leftInterval) clearInterval(leftInterval);
+        leftInterval = setInterval(() => {
+            dispatchKey(37);
+        }, 50);
+    });
 
-        btnRight.addEventListener("touchend", (e) => {
-            e.preventDefault();
-            if (rightInterval) {
-                clearInterval(rightInterval);
-                rightInterval = null;
-            }
-        }, { passive: false });
+    btnLeft.addEventListener("mouseup", () => {
+        if (leftInterval) {
+            clearInterval(leftInterval);
+            leftInterval = null;
+        }
+    });
 
-        btnRight.addEventListener("touchcancel", (e) => {
-            e.preventDefault();
-            if (rightInterval) {
-                clearInterval(rightInterval);
-                rightInterval = null;
-            }
-        }, { passive: false });
+    btnLeft.addEventListener("mouseleave", () => {
+        if (leftInterval) {
+            clearInterval(leftInterval);
+            leftInterval = null;
+        }
+    });
+}
 
-        // Mouse controls
-        btnRight.addEventListener("mousedown", (e) => {
-            e.preventDefault();
+// Touch controls for Right button
+if (btnRight) {
+    btnRight.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        dispatchKey(39); // Move Right
+        if (rightInterval) clearInterval(rightInterval);
+        rightInterval = setInterval(() => {
             dispatchKey(39);
-            if (rightInterval) clearInterval(rightInterval);
-            rightInterval = setInterval(() => {
-                dispatchKey(39);
-            }, 50);
-        });
+        }, 50);
+    }, { passive: false });
 
-        btnRight.addEventListener("mouseup", () => {
-            if (rightInterval) {
-                clearInterval(rightInterval);
-                rightInterval = null;
-            }
-        });
+    btnRight.addEventListener("touchend", (e) => {
+        e.preventDefault();
+        if (rightInterval) {
+            clearInterval(rightInterval);
+            rightInterval = null;
+        }
+    }, { passive: false });
 
-        btnRight.addEventListener("mouseleave", () => {
-            if (rightInterval) {
-                clearInterval(rightInterval);
-                rightInterval = null;
-            }
-        });
+    btnRight.addEventListener("touchcancel", (e) => {
+        e.preventDefault();
+        if (rightInterval) {
+            clearInterval(rightInterval);
+            rightInterval = null;
+        }
+    }, { passive: false });
+
+    // Mouse controls
+    btnRight.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        dispatchKey(39);
+        if (rightInterval) clearInterval(rightInterval);
+        rightInterval = setInterval(() => {
+            dispatchKey(39);
+        }, 50);
+    });
+
+    btnRight.addEventListener("mouseup", () => {
+        if (rightInterval) {
+            clearInterval(rightInterval);
+            rightInterval = null;
+        }
+    });
+
+    btnRight.addEventListener("mouseleave", () => {
+        if (rightInterval) {
+            clearInterval(rightInterval);
+            rightInterval = null;
+        }
+    });
+}
+
+// Touch and mouse controls for Fire button
+if (btnFire) {
+    btnFire.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        dispatchKey(70); // Fire (F key)
+    }, { passive: false });
+
+    btnFire.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        dispatchKey(70);
+    });
+}
+
+// Periodic check to show controls only when the gameplay starts
+setInterval(() => {
+    const mobileControls = document.getElementById("mobile-controls");
+    if (!mobileControls) return;
+
+    const child = document.getElementById("child");
+
+    let shouldShow = false;
+    
+    // Level 1 / Level 2 start condition (global startall variable set to 2)
+    if (typeof window.startall !== 'undefined' && window.startall === 2) {
+        shouldShow = true;
+    }
+    // Boss level start condition (child spaceship becomes visible)
+    if (child && child.style.visibility === "visible") {
+        shouldShow = true;
     }
 
-    // Touch and mouse controls for Fire button
-    if (btnFire) {
-        btnFire.addEventListener("touchstart", (e) => {
-            e.preventDefault();
-            dispatchKey(70); // Fire (F key)
-        }, { passive: false });
-
-        btnFire.addEventListener("mousedown", (e) => {
-            e.preventDefault();
-            dispatchKey(70);
-        });
+    if (shouldShow) {
+        mobileControls.classList.add("visible");
+    } else {
+        mobileControls.classList.remove("visible");
     }
-});
+}, 100);

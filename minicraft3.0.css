@@ -15,6 +15,7 @@ body{
     position: relative;
     background-blend-mode: darken;
     overflow: hidden;
+    touch-action: none;
 }
 .start{
     height: 20vh;
@@ -388,7 +389,7 @@ visibility:hidden;
     color: rgba(255, 255, 255, 0.9);
     user-select: none;
     -webkit-user-select: none;
-    touch-action: manipulation;
+    touch-action: none;
     transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -432,11 +433,25 @@ visibility:hidden;
 
 @media (max-width: 1024px) {
     :root {
-        --bullet-start: 22vh;
+        --bullet-start: 30vh;
     }
 
     #mobile-controls {
+        display: none;
+    }
+
+    #mobile-controls.visible {
         display: flex;
+    }
+
+    .control-btn {
+        width: 85px !important;
+        height: 85px !important;
+    }
+
+    #btn-fire {
+        width: 95px !important;
+        height: 95px !important;
     }
 
     #name {
@@ -485,7 +500,7 @@ visibility:hidden;
         height: 16vw !important;
         min-width: 55px !important;
         min-height: 55px !important;
-        bottom: 12vh !important;
+        bottom: 20vh !important;
     }
 
     .child img {
